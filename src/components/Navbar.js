@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Navbar({
   title = "set title here",
@@ -11,9 +11,9 @@ export default function Navbar({
     <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
       <div className="container-fluid">
         {/* CHANGED FROM a TAG TO Link COMPONENT */}
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           {title}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,15 +29,18 @@ export default function Navbar({
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               {/* CHANGED FROM a TAG TO Link COMPONENT */}
-              <Link className="nav-link active" aria-current="page" to="/">
+              {/* <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </Link>
+              </Link> */}
+              <a className="nav-link active" aria-current="page" href="#">
+                Home
+              </a>
             </li>
             <li className="nav-item">
               {/* CHANGED FROM a TAG TO Link COMPONENT */}
-              <Link className="nav-link" to="/about">
+              {/* <Link className="nav-link" to="/about">
                 {aboutText}
-              </Link>
+              </Link> */}
             </li>
           </ul>
           <div className="form-check form-switch">
@@ -54,7 +57,7 @@ export default function Navbar({
           </div>
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }
 
